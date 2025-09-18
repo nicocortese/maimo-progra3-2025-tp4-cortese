@@ -1,14 +1,51 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --foreground-rgb: 26, 26, 26; /* texto oscuro */
+  --background-start-rgb: 245, 245, 245; /* gris claro */
+  --background-end-rgb: 255, 255, 255; /* blanco */
+  --card-bg-rgb: 255, 255, 255; /* fondo de tarjetas */
+  --card-text-rgb: 26, 26, 26;
 }
 
-#pLogo {
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  font-family: "Archivo", sans-serif;
+}
+
+.logoFont {
   font-family: "Bebas Neue", sans-serif;
 }
 
-nav, input {
-  font-family: "Archivo", sans-serif;
+.text-balance {
+  text-wrap: balance;
+}
+
+.custom-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 40px;
+}
+.grid_5_col {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+@media screen and (max-width: 768px) {
+  .grid {
+    gap: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .grid > * {
+    grid-column: span 12;
+  }
 }

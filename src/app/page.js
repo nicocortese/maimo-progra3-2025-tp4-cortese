@@ -1,10 +1,13 @@
-import HomeContainer from "@/components/HomeContainer";
-import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import ShopGrid from "@/components/ShopGrid";
+import ShopFeatures from "@/components/ShopFeatures";
 
 export default function Home() {
   return (
     <main>
-    <Navbar />
-    <HomeContainer />
+      <Hero />
+      <ShopGrid />
+      <ShopFeatures />
     </main>
-  )};
+  );
+}
